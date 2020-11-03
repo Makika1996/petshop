@@ -1,0 +1,188 @@
+footer {
+    position: relative;
+
+    .dfooter {
+        position: absolute;
+        top: 200px;
+        right: 3%;
+        height: 285px;
+        object-fit: cover;
+
+        @include breakpoint(tablet) {
+            height: 190px;
+            top: 225px;
+        }
+
+        @include breakpoint(mobileonly) {
+            top: 752px;
+            right: 30%;
+        }
+
+    }
+
+    .support {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: "fl fl fl fa fs fw . .";
+        background-color: $color-blackblue;
+        padding: 7% 0;
+
+        @include breakpoint(tablet) {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: "fl fl fa fs fw";
+            padding: 7% 5%;
+        }
+
+        .footer-logo {
+            grid-area: fl;
+            text-align: center;
+
+            @include breakpoint(tablet) {
+                text-align: start;
+            }
+
+            img {
+                height: 60px;
+
+            }
+
+            p {
+                padding: 2% 20%;
+                font-size: 1.8vh;
+                color: $color-white;
+
+                @include breakpoint(tablet) {
+                    font-size: 14px;
+                    padding: 30px 40px 0 0;
+                }
+            }
+        }
+
+        h5 {
+            color: $color-lightblue;
+            font-size: 1.8vh;
+            font-family: 'Manrope-Bold';
+            padding: 30px 0 10px 0;
+
+            @include breakpoint(mobileonly) {
+                font-size: 16px;
+                padding-bottom: 15px;
+
+            }
+        }
+
+        .footer-about {
+            grid-area: fa;
+
+            ul {
+                list-style-type: none;
+                font-size: 1.8vh;
+                color: $color-white;
+
+                li {
+                    padding: 5% 0;
+
+                }
+            }
+        }
+
+        .footer-support {
+            grid-area: fs;
+
+            ul {
+                list-style-type: none;
+                font-size: 1.8vh;
+                color: $color-white;
+
+                li {
+                    padding: 5% 0;
+
+                }
+            }
+        }
+
+        .follow {
+            grid-area: fw;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                list-style-type: none;
+                padding: 10px;
+
+                li {
+                    font-size: 2vh;
+                    border-radius: 5px;
+                    background-color: $color-lightblue;
+                    width: 30px;
+                    height: 30px;
+                    padding: 5px;
+                    text-align: center;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        background-color: $color-darkblue;
+        text-align: center;
+        font-size: 1.8vh;
+        color: $color-white;
+        padding: 1% 0;
+        font-family: 'Manrope-Bold';
+    }
+
+    @include breakpoint(mobileonly) {
+        .support {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "fl""fa""fs""fw";
+            text-align: center;
+
+            .footer-logo {
+                display: block;
+                text-align: center;
+
+                p {
+                    padding: 20px 5px;
+                }
+            }
+
+            .footer-about {
+
+                ul {
+                    font-size: 14px;
+
+                    li {
+                        padding: 5px 0;
+
+                    }
+                }
+            }
+
+            .footer-support {
+
+                ul {
+                    font-size: 14px;
+
+                    li {
+                        padding: 5px 0;
+
+                    }
+                }
+            }
+
+            .follow {
+
+                ul {
+                    justify-items: center;
+                    padding-bottom: 200px;
+                }
+            }
+        }
+    }
+}

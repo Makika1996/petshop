@@ -1,0 +1,187 @@
+.service {
+    text-align: center;
+
+    @include breakpoint(mobileonly) {
+        margin: 0;
+    }
+
+    h1 {
+        color: $color-blackblue;
+        padding-bottom: 2%;
+
+        @include breakpoint(tablet) {
+            font-size: 30px;
+            padding-bottom: 25px;
+        }
+
+        @include breakpoint(mobileonly) {
+            font-size: 26px;
+            padding: 60px 0 20px 0;
+        }
+    }
+
+    .offer {
+        font-size: 2vh;
+        padding: 0 35% 5% 35%;
+        color: $color-grey;
+
+        @include breakpoint(tablet) {
+            font-size: 16px;
+            padding: 0 140px 50px 140px;
+        }
+
+        @include breakpoint(mobileonly) {
+            font-size: 14.5px;
+            padding: 0 70px 50px 70px;
+        }
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: start;
+
+        @include breakpoint(tablet) {
+            grid-template-columns: 1fr;
+        }
+
+        .items-section {
+            @include breakpoint(tablet) {
+                margin-bottom: 10%;
+            }
+
+            .item {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-areas: "img h4 h4 h4 . . da"". p p p p . .";
+                justify-items: start;
+                align-items: center;
+                margin: 1% 20% 1% 0;
+
+                @include breakpoint(tablet) {
+                    margin: 0;
+                }
+
+                .icon-item {
+                    grid-area: img;
+                    justify-self: center;
+                    height: 15px;
+
+                    @include breakpoint(tablet) {
+                        height: 20px;
+                    }
+
+                }
+
+                h4 {
+                    margin: 4% 0;
+                    grid-area: h4;
+                    font-family: 'RobotoSlab-Bold';
+                    font-size: 3vh;
+
+                    @include breakpoint(tablet) {
+                        font-size: 25px;
+                    }
+                }
+
+                p {
+                    grid-area: p;
+                    display: none;
+                    font-size: 1.8vh;
+                    padding-bottom: 5%;
+                    text-align: justify;
+                }
+
+                .down-arrow {
+                    grid-area: da;
+                    transform: rotate(270deg);
+                    height: 10px;
+
+                    @include breakpoint(tablet) {
+                        height: 20px;
+                    }
+
+                    @include breakpoint(mobileonly) {
+                        justify-self: center;
+                    }
+                }
+
+                transition-duration: 0.5s;
+
+                &:hover {
+                    background-color: $color-lightblue;
+
+                    .down-arrow {
+                        transform: rotate(90deg);
+
+                        @include breakpoint(tablet) {
+                            height: 20px;
+                        }
+                    }
+
+                    p {
+                        display: block;
+
+                        @include breakpoint(tablet) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .benefits {
+            @include breakpoint(tablet) {
+                text-align: center;
+            }
+
+            h3 {
+                color: $color-grey;
+                text-transform: uppercase;
+                font-size: 20px;
+                letter-spacing: 3px;
+                margin-left: 3%;
+                margin-bottom: 5%;
+
+                @include breakpoint(mobileonly) {
+                    font-size: 14px;
+                    margin-left: 0;
+                }
+            }
+
+            .item-benefits {
+                display: flex;
+                padding-bottom: 3%;
+
+                @include breakpoint(tablet) {
+                    justify-content: center;
+                }
+
+                @include breakpoint(tablet) {
+                    display: block;
+                    margin: 24px 70px;
+                }
+
+                img {
+                    height: 13px;
+                    color: $color-lightblue;
+                    margin-right: 1%;
+
+                    @include breakpoint(tablet) {
+                        height: 20px;
+                        margin-right: 15px;
+                    }
+                }
+
+                p {
+                    font-family: 'RobotoSlab-Rebular';
+                    font-size: 2.2vh;
+
+                    @include breakpoint(tablet) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

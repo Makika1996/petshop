@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    font-family: 'Manrope-Regular';
+    overflow-x: hidden;
+}
+
+main {
+    margin: 100px 130px;
+
+    @include breakpoint(tablet) {
+        margin: 10% 3%;
+    }
+
+    @include breakpoint (mobileonly) {
+        margin: 20px 40px;
+    }
+}
+
+.header {
+    font-size: 4vh;
+    font-family: 'RobotoSlab-Bold';
+}

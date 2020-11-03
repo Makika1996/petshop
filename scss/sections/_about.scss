@@ -1,0 +1,125 @@
+.about {
+    position: relative;
+    margin: 245px 130px 100px 130px;
+
+    @include breakpoint(tablet) {
+        margin: 200px 24px 0 24px;
+    }
+
+    @include breakpoint(mobileonly) {
+        margin: 200px 0 0 0;
+    }
+
+    .rectangle {
+        background-color: rgba($color: $color-grey, $alpha: 0.3);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        .yellow-square {
+            height: 130px;
+            width: 130px;
+            color: none;
+            border: 8px solid $color-yellow;
+            border-radius: 5%;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -30px;
+            left: -30px;
+
+            @include breakpoint(tablet) {
+                height: 140px;
+                width: 140px;
+                top: -40px;
+                left: -50px;
+            }
+
+            @include breakpoint(mobileonly) {
+                top: -80px;
+                left: -70px;
+            }
+        }
+
+
+        h3 {
+            font-family: 'RobotoSlab-Bold';
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $color-yellow;
+            padding: 85px 0 22px 0;
+
+            @include breakpoint(tablet) {
+                font-size: 14px;
+                padding: 50px 0 25px 0;
+            }
+
+            @include breakpoint(mobileonly) {
+                font-size: 12px;
+                padding: 50px 0 10px 0;
+            }
+        }
+
+        h1 {
+            font-family: 'RobotoSlab-Bold';
+            font-size: 30px;
+            padding: 5px 375px 5px 370px;
+
+            @include breakpoint(tablet) {
+                font-size: 26px;
+                padding: 5px 150px 5px 150px;
+            }
+
+            @include breakpoint(mobileonly) {
+                font-size: 20px;
+                padding: 5px 70px 5px 70px;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            padding: 15px 300px;
+
+            @include breakpoint(tablet) {
+                font-size: 12px;
+                padding: 15px 60px;
+            }
+
+            @include breakpoint(tablet) {
+                font-size: 14px;
+                padding: 15px 20px;
+            }
+        }
+
+        .bottom {
+            padding-bottom: 70px;
+
+            @include breakpoint(tablet) {
+                padding-bottom: 50px;
+            }
+        }
+
+    }
+
+    .green-circle {
+        height: 130px;
+        width: 130px;
+        color: none;
+        border: 8px solid $color-green;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -30px;
+        right: -20px;
+
+        @include breakpoint(tablet) {
+            height: 140px;
+            width: 140px;
+            bottom: -80px;
+            right: -45px;
+        }
+
+        @include breakpoint(tablet) {
+            bottom: -90px;
+            right: -60px;
+        }
+    }
+}
